@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" title="Original" href="Design.css" />
+		<link rel="alternate stylesheet" title="Biggerfont" href="Designfont.css" />
+		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+		
+				<!-- Google Maps Java -->
+		<script
+			src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCQxONMeqbCuBABcN-HAHayV1BWpINy8yU">
+		</script>
+		<script>
+			function initialize()
+			{
+			  var mapProp = {
+				center: new google.maps.LatLng(53.2619198,-2.5016168),
+				zoom:15,
+				disableDefaultUI:true,    
+				scrollwheel: false,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			  };
+			  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+		
+		<script type="text/javascript">
+
+			var slideimages = new Array() // create new array to preload images
+			slideimages[0] = new Image() // create new instance of image object
+			slideimages[0].src = "IMG/1.jpg" // set image src property to image path, preloading image in the process
+			slideimages[1] = new Image()
+			slideimages[1].src = "IMG/2.jpg"
+			slideimages[2] = new Image()
+			slideimages[2].src = "IMG/3.jpg"
+
+		</script>
+		<title>Fredy Mack - Admin Log in</title>
+		<meta name="Description" content="We are Fredy Mack! We are an independent logistics company that deals with many different services. Use this page to request a quote and make any other enquiries">
+<meta name="Keywords" content="Fredy Mack, Express, Logistics, Fredy, Mack, Van, Courier, Give 100%, Services, Cheap, Reliable, Friendly, Northwich, Cheshire, Macclesfield, Winsford, Middlewich, Surrounding Areas, Delivery, Mail, Parcel, Delivery, Free Quote, Contact">
+	
+	</head>
+	<body>
+
+		<!--Menu Goes Here-->
+		<div id="menu">
+			<p id="title">FREDY MACK LOGISTICS</p>
+			<a class="MenuButtons" href="index.html">Home</a>
+			<a class="MenuButtons" href="about.html">About Us</a>
+			<a class="MenuButtons" href="services.html">Services</a>
+			<a class="MenuButtons" href="media.html">Media</a>
+			<a class="MenuButtons" href="contact.html">Contact Us</a>
+			<div class="dropdown">
+				<a href="">v</a>
+				<div class="dropdown-content">
+					<a class="social" href="http://www.facebook.com/">Facebook</a> <br /> <br />
+					<a class="social" href="http://www.twitter.com/">Twitter</a>
+					<br /> <hr />
+					<input name="reSize" type="button" value="&nbsp;+&nbsp;" onclick="resizeText(1)" />
+					<input name="reSize2" type="button" value="&nbsp;-&nbsp;" onclick="resizeText(-1)" />
+				</div>
+			</div>
+		</div>
+		
+		<!--Heading Content Goes Here-->
+		<div id="container">
+		<div id="googleMap" style="width:100%;height:398px;"></div>
+		<img id="floatlogo" src="IMG/logotest.png" alt="logo"/>
+			<div id="margin">
+				<img src="IMG/1.jpg" id="slide" class="landing" alt="Fredy Mack Slideshow" />
+				
+				<script type="text/javascript">
+					//variable that will increment through the images
+					var step=0
+
+					function slideit(){
+					 //if browser does not support the image object, exit.
+					 if (!document.images)
+					  return
+					 document.getElementById('slide').src = slideimages[step].src
+					 if (step<2)
+					  step++
+					 else
+					  step=0
+					 //call function "slideit()" every 2.5 seconds
+					 setTimeout("slideit()",2500)
+					}
+
+					slideit()
+				</script>
+				
+				<h2>Admin Log On</h2>
+				<br />
+				<h1>Fredy Mack!</h1>
+				
+				<div id="quote"></div>
+				<hr />
+				
+				<!--Quotes Go Here-->
+				<script type="text/javascript">
+					(function() {
+					  var quotes = [
+						{
+						  text: "\"Small Enough to Care, Big Enough to Cope.\"",
+
+						},
+						{
+						  text: "\"On Time. Every Time.\"",
+						},
+						{
+						  text: "\"We Care.\"",
+
+						},
+						{
+						  text: "\"Giving 100%, 24/7.\"",
+						}
+					  ];
+					  var quote = quotes[Math.floor(Math.random() * quotes.length)];
+					  document.getElementById("quote").innerHTML =
+						'<p>' + quote.text + '</p>';
+					})();
+				</script>
+				
+				<!--Content Goes Here! -->
+			<div id="foo">
+				
+				 <form action = "login.php"  method = "post">
+                    <p>Username: <input type = "text" name = "username"></p>
+                    <p>Password: <input type = "password" name="password"></p>
+                    <p><input type = "submit" value = "Log in"></p>
+                </form>
+                
+				
+				
+			</div>
+				<script>
+					function resizeText(multiplier) {
+					var elem = document.getElementById("foo");
+					var currentSize = elem.style.fontSize || 1;
+					elem.style.fontSize = ( parseFloat(currentSize) + (multiplier * 0.2)) + "em";
+					}
+				</script>	
+			</div>
+		</div>
+		<footer>
+			<table id="footer">
+				<tr>
+					<td><a class="footmenu" href="index.html">Home</a></td>
+					<td><a class="footmenu" href="http://www.facebook.com/">Facebook</a></td>
+					<td><a class="footmenu" href="http://www.twitter.com/">Twitter</a></td>
+				</tr>
+				<tr>
+					<td><a class="footmenu" href="about.html">About Us</a><td>
+				</tr>
+				<tr>				
+					<td><a class="footmenu" href="services.html">Services</a><td>
+				</tr>
+				<tr>
+					<td><a class="footmenu" href="media.html">Media</a><td>
+				</tr>
+				<tr>
+					<td><a class="footmenu" href="contact.html">Contact Us</a><td>
+					<td><a class="footmenu" href="terms.html">Terms and Conditions</a><td></td>
+				</tr>
+			</table>
+		</footer>
+	</body>
+</html>

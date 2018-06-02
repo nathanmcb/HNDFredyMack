@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="Design.css" />
+		<link rel="alternate stylesheet" title="Biggerfont" href="Designfont.css" />
+		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+		
+				<!-- Google Maps Java -->
+		<script
+			src="http://maps.googleapis.com/maps/api/js">
+		</script>
+		<script>
+			function initialize()
+			{
+			  var mapProp = {
+				center: new google.maps.LatLng(53.2619198,-2.5016168),
+				zoom:15,
+				disableDefaultUI:true,    
+				scrollwheel: false,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			  };
+			  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+		
+		<script type="text/javascript">
+
+			var slideimages = new Array() // create new array to preload images
+			slideimages[0] = new Image() // create new instance of image object
+			slideimages[0].src = "IMG/1.jpg" // set image src property to image path, preloading image in the process
+			slideimages[1] = new Image()
+			slideimages[1].src = "IMG/2.jpg"
+			slideimages[2] = new Image()
+			slideimages[2].src = "IMG/3.jpg"
+
+		</script>
+		<title>Fredy Mack - Express Courier</title>
+	
+	</head>
+	<body>
+
+		<!--Menu Goes Here-->
+		<div id="menu">
+			<p id="title">FREDY MACK LOGISTICS</p>
+			<a class="MenuButtons" href="index.html">Home</a>
+			<a class="MenuButtons" href="about.html">About Us</a>
+			<a class="MenuButtons" href="services.html">Services</a>
+			<a class="MenuButtons" href="media.html">Media</a>
+			<a class="MenuButtons" href="contact.html">Contact Us</a>
+			<div class="dropdown">
+				<a href="">v</a>
+				<div class="dropdown-content">
+					<a class="social" href="http://www.facebook.com/">Facebook</a> <br /> <br />
+					<a class="social" href="http://www.twitter.com/">Twitter</a>
+					<br /> <hr />
+					<input name="reSize" type="button" value="&nbsp;+&nbsp;" onclick="resizeText(1)" />
+					<input name="reSize2" type="button" value="&nbsp;-&nbsp;" onclick="resizeText(-1)" />
+				</div>
+			</div>
+		</div>
+		
+		<!--Heading Content Goes Here-->
+		<div id="container">
+		<div id="googleMap" style="width:100%;height:398px;"></div>
+		<img id="floatlogo" src="IMG/logotest.png" alt="logo"/>
+			<div id="margin">
+				<img src="IMG/1.jpg" id="slide" class="landing" alt="Fredy Mack Slideshow" />
+				
+				<script type="text/javascript">
+					//variable that will increment through the images
+					var step=0
+
+					function slideit(){
+					 //if browser does not support the image object, exit.
+					 if (!document.images)
+					  return
+					 document.getElementById('slide').src = slideimages[step].src
+					 if (step<2)
+					  step++
+					 else
+					  step=0
+					 //call function "slideit()" every 2.5 seconds
+					 setTimeout("slideit()",2500)
+					}
+
+					slideit()
+				</script>
+				
+				<h2>Services</h2>
+				<br />
+				<h1>Fredy Mack!</h1>
+				
+				<div id="quote"></div>
+				<hr />
+				
+				<!--Quotes Go Here-->
+				<script type="text/javascript">
+					(function() {
+					  var quotes = [
+						{
+						  text: "\"Small Enough to Care, Big Enough to Cope.\"",
+
+						},
+						{
+						  text: "\"On Time. Every Time.\"",
+						},
+						{
+						  text: "\"We Care.\"",
+
+						},
+						{
+						  text: "\"Giving 100%, 24/7.\"",
+						}
+					  ];
+					  var quote = quotes[Math.floor(Math.random() * quotes.length)];
+					  document.getElementById("quote").innerHTML =
+						'<p>' + quote.text + '</p>';
+					})();
+				</script>
+				
+				<!--Content Goes Here! -->
+				<div id="foo">
+					<table id="service" border="1px">
+						<tr>	
+							<td colspan="2">
+								<center>
+									Fredy Mack provides multiples of different services to make your life easier!
+								</center>
+							</td>
+						</tr>
+						<tr>	
+							<td>
+								<u>Motor-vehicle transport</u> <br /> <br />
+								If you need a Motorbike transported from one destination to another, we provide this service and have the correct loading and holding gear to care for your vehicle.
+							</td>
+							<td>
+								<img src="IMG/4.jpg" alt="Motorbike Image">
+							</td>
+						</tr>
+							<tr>	
+							<td>
+								<u>House Moving Transport</u> <br /> <br />
+								We provide an excellent service with house moving. We will pack with love and care and give you as much bank for your buck!
+							</td>
+							<td>
+								<img src="IMG/1.jpg" alt="Mouse Move Image">
+							</td>
+						</tr>
+						<tr>	
+							<td>
+								<u>Office Moving Transport</u> <br /> <br />
+								Need office supplies moving it high quantities? We've got you covered! we will take desks, chairs, computers, printers and much more and transport it to a destination of your choice.
+							</td>
+							<td>
+								<img src="IMG/2.jpg" alt="Office Image">
+							</td>
+						</tr>
+							<tr>	
+							<td>
+								<u>Any sized items</u> <br /> <br />
+								Want a package delivered from one end of the country to the other? Is is a giant package, or a small box? Don't worry, will take any sized packages all across the nation.
+							</td>
+							<td>
+								<img src="IMG/5.png" alt="Package Image">
+							</td>
+						</tr>
+					</table>
+				</div>
+				<script>
+					function resizeText(multiplier) {
+					var elem = document.getElementById("foo");
+					var currentSize = elem.style.fontSize || 1;
+					elem.style.fontSize = ( parseFloat(currentSize) + (multiplier * 0.2)) + "em";
+					}
+				</script>
+			</div>
+		</div>
+		<footer>
+			<table id="footer">
+				<tr>
+					<td><a class="footmenu" href="index.html">Home</a></td>
+					<td><a class="footmenu" href="http://www.facebook.com/">Facebook</a></td>
+					<td><a class="footmenu" href="http://www.twitter.com/">Twitter</a></td>
+				</tr>
+				<tr>
+					<td><a class="footmenu" href="about.html">About Us</a><td>
+				</tr>
+				<tr>				
+					<td><a class="footmenu" href="services.html">Services</a><td>
+				</tr>
+				<tr>
+					<td><a class="footmenu" href="media.html">Media</a><td>
+				</tr>
+				<tr>
+					<td><a class="footmenu" href="contact.html">Contact Us</a><td>
+					<td><a class="footmenu" href="terms.html">Terms and Conditions</a><td></td>
+				</tr>
+			</table>
+		</footer>
+	</body>
+</html>

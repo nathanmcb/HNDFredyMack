@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="Design.css" />
+		<!-- Google Maps Java -->
+		<script
+			src="http://maps.googleapis.com/maps/api/js">
+		</script>
+		<script>
+			function initialize()
+			{
+			  var mapProp = {
+				center: new google.maps.LatLng(53.2619198,-2.5016168),
+				zoom:15,
+				disableDefaultUI:true,    
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			  };
+			  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+		
+		<script type="text/javascript">
+
+			var slideimages = new Array() // create new array to preload images
+			slideimages[0] = new Image() // create new instance of image object
+			slideimages[0].src = "IMG/1.jpg" // set image src property to image path, preloading image in the process
+			slideimages[1] = new Image()
+			slideimages[1].src = "IMG/2.jpg"
+			slideimages[2] = new Image()
+			slideimages[2].src = "IMG/3.jpg"
+
+		</script>
+		<title>Fredy Mack - Express Courier</title>
+	
+	</head>
+	<body>
+
+		<!--Menu Goes Here-->
+		<div id="menu">
+			<p id="title">FREDY MACK LOGISTICS</p>
+			<a class="MenuButtons" href="index.html">Home</a>
+			<a class="MenuButtons" href="about.html">About Us</a>
+			<a class="MenuButtons" href="services">Services</a>
+			<a class="MenuButtons" href="media">Media</a>
+			<a class="MenuButtons" href="contact">Contact Us</a>
+		</div>
+		
+		<!--Heading Content Goes Here-->
+		<div id="container">
+		<div id="googleMap" style="width:100%;height:398px;"></div>
+		<img id="floatlogo" src="IMG/logotest.png" alt="logo"/>
+			
+
+			
+			<div id="margin">
+				<img src="IMG/1.jpg" id="slide" class="landing" />
+				
+				<script type="text/javascript">
+					//variable that will increment through the images
+					var step=0
+
+					function slideit(){
+					 //if browser does not support the image object, exit.
+					 if (!document.images)
+					  return
+					 document.getElementById('slide').src = slideimages[step].src
+					 if (step<2)
+					  step++
+					 else
+					  step=0
+					 //call function "slideit()" every 2.5 seconds
+					 setTimeout("slideit()",2500)
+					}
+
+					slideit()
+				</script>
+				
+				<h2>Template</h2>
+				<br />
+				<h1>Fredy Mack!</h1>
+				
+				<div id="quote"></div>
+				<hr />
+				
+				<!--Quotes Go Here-->
+				<script type="text/javascript">
+					(function() {
+					  var quotes = [
+						{
+						  text: "\"Small Enough to Care, Big Enough to Cope.\"",
+
+						},
+						{
+						  text: "\"On Time. Every Time.\"",
+						},
+						{
+						  text: "\"We Care.\"",
+
+						},
+						{
+						  text: "\"Giving 100%, 24/7.\"",
+						}
+					  ];
+					  var quote = quotes[Math.floor(Math.random() * quotes.length)];
+					  document.getElementById("quote").innerHTML =
+						'<p>' + quote.text + '</p>';
+					})();
+				</script>
+				
+				<!--Content Goes Here! -->
+				
+				<p>Ground round meatball jowl ham drumstick hamburger porchetta corned beef. Ham hock filet mignon turkey chicken chuck sausage ball tip fatback meatloaf salami shankle t-bone pork chop pork loin pastrami. Spare ribs pancetta tri-tip leberkas beef ribs ball tip sirloin doner. Tenderloin pork pig shoulder alcatra shank cow beef prosciutto.
+					Pig t-bone ball tip shoulder kielbasa short loin doner chuck brisket prosciutto meatball turducken. Picanha ball tip capicola boudin, tail salami shank swine ground round shoulder. Hamburger chicken kielbasa, meatloaf swine meatball kevin. Hamburger tenderloin pork chop filet mignon drumstick, jerky andouille frankfurter capicola pork loin pork doner turducken pancetta t-bone. Turducken bresaola meatball t-bone, jerky strip steak tongue ham hock tail prosciutto picanha shank swine jowl.
+					Kielbasa beef jowl meatball doner ham shank andouille fatback ground round drumstick ham hock pancetta ribeye. Chicken bresaola tongue, andouille short loin pork chop cow pancetta jowl turkey pork capicola. Turducken kielbasa brisket pancetta, chicken salami sirloin filet mignon jowl ground round pastrami. T-bone sirloin cupim, strip steak meatball chuck bresaola salami.
+					Boudin jerky short ribs tri-tip pork belly meatloaf.</p>
+
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/EMHOm2gK4j0" frameborder="0" allowfullscreen></iframe>
+
+				<p>Sausage ground round shankle ham short ribs beef meatloaf rump capicola tail pork belly. Capicola beef ribs bacon, salami picanha meatloaf pork belly tenderloin bresaola strip steak. Strip steak jerky porchetta ball tip doner meatloaf tongue. Kielbasa meatball rump meatloaf hamburger jowl tongue bresaola frankfurter ball tip pork belly. Fatback t-bone chuck, sirloin pastrami frankfurter alcatra meatloaf tenderloin beef ribs ham hock pig shoulder.
+					Porchetta filet mignon frankfurter beef drumstick sausage tail spare ribs pork loin picanha turkey cow shank brisket. Spare ribs ball tip pork loin chicken. Cupim beef ribs ribeye pastrami shank. Kevin leberkas turducken frankfurter, swine picanha pork meatball shankle. Beef pork loin ribeye shoulder short loin. Filet mignon short ribs shankle, chuck tongue venison picanha ham hock jowl meatloaf pig hamburger flank. Picanha frankfurter beef ribs, meatloaf pork loin landjaeger rump swine.
+					Beef sausage bacon, jowl short ribs ham hock bresaola brisket boudin porchetta tenderloin corned beef pastrami sirloin fatback. Porchetta venison sausage, strip steak kielbasa drumstick turducken meatball ham short ribs pastrami. Bacon alcatra beef ribs shoulder flank. Leberkas pork chop t-bone filet mignon strip steak tail shankle, sirloin rump shank bresaola fatback. Beef ribs shoulder alcatra, picanha landjaeger pancetta pork chop fatback boudin bresaola chicken frankfurter turducken bacon. Chicken beef ribs picanha prosciutto, ham hock bresaola shoulder corned beef tongue jerky t-bone sausage strip steak cow brisket.
+					T-bone ham landjaeger, pork loin leberkas meatball beef andouille beef ribs frankfurter short loin. Andouille filet mignon pork pastrami, fatback cow pancetta salami sausage. Chuck pork pancetta bacon short ribs tri-tip prosciutto t-bone cow venison alcatra strip steak ground round. Pork jowl frankfurter fatback andouille pancetta. Meatloaf chuck picanha ham hock filet mignon, beef brisket beef ribs. Pork tri-tip fatback picanha ham hock. Andouille pork jerky, turducken drumstick chuck chicken sausage strip steak.</p>
+				</div>
+		</div>
+	</body>
+</html>

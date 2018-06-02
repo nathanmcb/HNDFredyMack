@@ -1,0 +1,30 @@
+Websites used...
+
+Most code - 
+	http://www.w3schools.com/
+	http://www.stackoverflow.com/
+	
+
+Slideshow - 
+	http://www.javascriptkit.com/howto/show2.shtml
+	
+lightbox - 
+	http://webdesign.tutsplus.com/articles/super-simple-lightbox-with-css-and-jquery--webdesign-3528
+
+Dropdown - 
+
+	http://www.w3schools.com/css/css_dropdowns.asp
+
+
+Alt Stylesheet - 
+	http://www.w3.org/Style/Examples/007/alternatives.en.html
+
+
+Font size changer - 
+	http://stackoverflow.com/questions/16148594/changing-font-size-with-buttons-in-a-specific-div
+
+Favicon - 
+	http://stackoverflow.com/questions/9943771/adding-a-favicon-to-a-static-html-page
+
+Maps - 
+	http://www.w3schools.com/googleapi/tryit.asp?filename=tryhtml_map_controls_disable
